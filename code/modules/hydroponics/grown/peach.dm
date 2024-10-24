@@ -1,7 +1,7 @@
 // Peach
 /obj/item/seeds/peach
 	name = "peach seed pack"
-	desc = "These seeds grow into peach trees."
+	desc = "After a serious of inexplicable and disastrous events during shipping, Nanotrasen's suppliers refuse to transport these. How it got aboard the station is a mystery."
 	icon_state = "seed-peach"
 	species = "peach"
 	plantname = "Peach Tree"
