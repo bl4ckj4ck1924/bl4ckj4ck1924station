@@ -6,8 +6,8 @@
 	species = "pomegranate"
 	plantname = "Pomegranate Bush"
 	product = /obj/item/food/grown/pomegranate
-	lifespan = 60
-	endurance = 40
+	lifespan = 75
+	endurance = 45
 	yield = 3
 	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_grow = "pomegranate-grow"
@@ -26,9 +26,9 @@
 	tastes = list("pomegranate" = 1)
 
 /obj/item/food/grown/pomegranate/make_processable()
-	AddElement(/datum/element/processable, /obj/item/kitchen/spoon, /obj/item/food/grown/pomegranateseed, 5, 20, screentip_verb = "Scoop out seeds")
+	AddElement(/datum/element/processable, /obj/item/kitchen/spoon, /obj/item/food/pomegranateseed, 5, 20, screentip_verb = "Scoop out seeds")
 
-/obj/item/food/grown/pomegranateseed
+/obj/item/food/pomegranateseed
 	name = "pomegranate seed"
 	seed = /obj/item/seeds/pomegranate
 	desc = "A sweet and juicy seed."
@@ -52,10 +52,13 @@
 	species = "chthonicpomegranate"
 	plantname = "chthonic Pomegranate Bush"
 	product = /obj/item/food/grown/pomegranate/chthonic
-	lifespan = 60
-	endurance = 40
+	lifespan = 75
+	endurance = 45
 	yield = 3
-	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/glow/purple)
+	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	icon_grow = "chthonicpomegranate-grow"
+	icon_dead = "chthonicpomegranate-dead"
+	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	reagents_add = list(/datum/reagent/inverse/helgrasp = 0.08, /datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.1)
 	rarity = 20
 
@@ -69,9 +72,9 @@
 	tastes = list("the underworld" = 2,"pomegranate" = 1)
 
 /obj/item/food/grown/pomegranate/chthonic/make_processable()
-	AddElement(/datum/element/processable, /obj/item/kitchen/spoon, /obj/item/food/grown/pomegranateseed/chthonic, 5, 20, screentip_verb = "Scoop out seeds")
+	AddElement(/datum/element/processable, /obj/item/kitchen/spoon, /obj/item/food/pomegranateseed/chthonic, 5, 20, screentip_verb = "Scoop out seeds")
 
-/obj/item/food/grown/pomegranateseed/chthonic
+/obj/item/food/pomegranateseed/chthonic
 	name = "chthonic pomegranate seed"
 	seed = /obj/item/seeds/pomegranate/chthonic
 	desc = "A sweet and juicy seed that belongs to the underworld."
