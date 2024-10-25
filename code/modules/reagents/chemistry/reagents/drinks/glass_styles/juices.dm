@@ -58,6 +58,11 @@
 	name = "glass of peach juice"
 	drink_type = FRUIT
 
+/datum/glass_style/has_foodtype/drinking_glass/pomegranatejuice
+	required_drink_type = /datum/reagent/consumable/pomegranatejuice
+	name = "glass of pomegranate juice"
+	drink_type = FRUIT
+
 /datum/glass_style/drinking_glass/tomatojuice
 	required_drink_type = /datum/reagent/consumable/tomatojuice
 	name = "glass of tomato juice"

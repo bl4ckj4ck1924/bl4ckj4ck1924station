@@ -177,3 +177,7 @@
 /datum/chemical_reaction/drink/t_letter
 	results = list(/datum/reagent/consumable/t_letter = 2)
 	required_reagents = list(/datum/reagent/consumable/nothing = 1, /datum/reagent/consumable/tea = 1)
+
+/datum/chemical_reaction/drink/grenadine
+	results = list(/datum/reagent/consumable/grenadine = 2)
+	required_reagents = list(/datum/reagent/consumable/pomegranatejuice = 1, /datum/reagent/consumable/sugar = 1)
