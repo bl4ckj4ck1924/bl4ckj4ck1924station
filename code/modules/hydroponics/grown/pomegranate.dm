@@ -78,7 +78,7 @@
 	icon = 'icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "chthonicpomegranateseed"
 	food_reagents = list(
-		/datum/reagent/inverse/helgrasp = 0.4,
+		/datum/reagent/inverse/helgrasp = 0.4
 		/datum/reagent/consumable/nutriment/vitamin = 0.2,
 		/datum/reagent/consumable/nutriment = 0.5,
 	)
