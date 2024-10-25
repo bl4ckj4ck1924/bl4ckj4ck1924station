@@ -49,8 +49,9 @@
 	name = "chthonic pomegranate seed pack"
 	desc = "These seeds grow into chthonic pomegranate bushes. They yearn for the deep earth."
 	icon_state = "seed-chthonicpomegranate"
+	icon_grow = "chthonicpomegranate-grow"
 	species = "chthonicpomegranate"
-	plantname = "chthonic Pomegranate Bush"
+	plantname = "Chthonic Pomegranate Bush"
 	product = /obj/item/food/grown/pomegranate/chthonic
 	lifespan = 60
 	endurance = 40
