@@ -1011,13 +1011,6 @@
 	taste_description = "peaches"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/consumable/pomegranatejuice
-	name = "Pomegranate Juice"
-	description = "Sweet and tart. An ingredient in grenadine."
-	color = "#cf0847"
-	taste_description = "pomegranate"
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-
 /datum/reagent/consumable/cream_soda
 	name = "Cream Soda"
 	description = "A classic space-American vanilla flavored soft drink."
