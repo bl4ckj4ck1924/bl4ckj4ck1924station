@@ -26,7 +26,7 @@
 	tastes = list("pomegranate" = 1)
 
 /obj/item/food/grown/pomegranate/make_processable()
-	AddElement(/datum/element/processable, /obj/item/kitchen/spoon, /obj/item/food/grown/pomegranateseed, 5, 20, screentip_verb = "Scoop out seeds")
+	AddElement(/datum/element/processable, TOOL_MINING, /obj/item/food/grown/pomegranateseed, 5, 1, screentip_verb = "Scoop out seeds")
 
 /obj/item/food/grown/pomegranateseed
 	name = "pomegranate seed"
@@ -70,7 +70,7 @@
 	tastes = list("the underworld" = 2,"pomegranate" = 1)
 
 /obj/item/food/grown/pomegranate/chthonic/make_processable()
-	AddElement(/datum/element/processable, /obj/item/kitchen/spoon, /obj/item/food/grown/pomegranateseed/chthonic, 5, 20, screentip_verb = "Scoop out seeds")
+	AddElement(/datum/element/processable, TOOL_MINING, /obj/item/food/grown/pomegranateseed/chthonic, 5, 1, screentip_verb = "Scoop out seeds")
 
 /obj/item/food/grown/pomegranateseed/chthonic
 	name = "chthonic pomegranate seed"
