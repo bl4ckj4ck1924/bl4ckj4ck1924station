@@ -18865,8 +18865,7 @@
 /area/station/commons/vacant_room)
 "fEZ" = (
 /obj/structure/noticeboard/directional/north,
-/obj/item/fish_tank/lawyer,
-/obj/structure/table/wood,
+/obj/structure/aquarium/lawyer,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/wood,
@@ -28230,6 +28229,13 @@
 /obj/effect/mapping_helpers/airlock/access/any/security/maintenance,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/department/security)
+"jer" = (
+/obj/item/clothing/under/color/jumpskirt/white,
+/obj/effect/turf_decal/trimline/neutral/filled/corner{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/service)
 "jev" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -43863,8 +43869,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/disposalpipe/junction/yjunction{
-	dir = 8
+/obj/structure/disposalpipe/junction{
+	dir = 2
 	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
@@ -44434,7 +44440,7 @@
 /turf/open/openspace,
 /area/station/hallway/primary/tram/center)
 "oKZ" = (
-/mob/living/basic/bot/repairbot,
+/mob/living/simple_animal/bot/floorbot,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -58647,7 +58653,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "tIi" = (
-/mob/living/basic/bot/repairbot,
+/mob/living/simple_animal/bot/floorbot,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat_interior)
 "tIk" = (
@@ -105385,7 +105391,7 @@ xpb
 xpb
 kVP
 xpb
-sKN
+jer
 xJG
 vsn
 bHn

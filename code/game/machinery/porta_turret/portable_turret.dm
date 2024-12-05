@@ -655,7 +655,7 @@ DEFINE_BITFIELD(turret_flags, list(
 
 
 	//Shooting Code:
-	A.aim_projectile(target, T)
+	A.preparePixelProjectile(target, T)
 	A.firer = src
 	A.fired_from = src
 	if(ignore_faction)

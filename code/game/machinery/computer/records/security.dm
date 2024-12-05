@@ -179,7 +179,7 @@
 
 		if("set_note")
 			var/note = strip_html_full(params["note"], MAX_MESSAGE_LEN)
-			investigate_log("[user] has changed the security note of record: \"[target]\" from \"[target.security_note]\" to \"[note]\".", INVESTIGATE_RECORDS)
+			investigate_log("[user] has changed the security note of record: \"[target]\" from \"[target.security_note]\" to \"[note]\".")
 			target.security_note = note
 			return TRUE
 

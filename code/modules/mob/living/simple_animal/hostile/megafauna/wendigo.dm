@@ -198,9 +198,11 @@ Difficulty: Hard
 
 /obj/projectile/colossus/wendigo_shockwave
 	name = "wendigo shockwave"
-	speed = 0.5
+	speed = 2
+	/// If wave movement is enabled
+	var/wave_movement = FALSE
 	/// Amount the angle changes every pixel move
-	var/wave_speed = 0.5
+	var/wave_speed = 15
 	/// Amount of movements this projectile has made
 	var/pixel_moves = 0
 
@@ -208,16 +210,18 @@ Difficulty: Hard
 	damage = 15
 
 /obj/projectile/colossus/wendigo_shockwave/wave
-	speed = 0.125
-	homing = TRUE
-	wave_speed = 0.3
+	speed = 8
+	wave_movement = TRUE
+	wave_speed = 10
 
 /obj/projectile/colossus/wendigo_shockwave/wave/alternate
-	wave_speed = -0.3
+	wave_speed = -10
 
-/obj/projectile/colossus/wendigo_shockwave/process_homing()
-	pixel_moves++
-	set_angle(original_angle + pixel_moves * wave_speed)
+/obj/projectile/colossus/wendigo_shockwave/pixel_move(trajectory_multiplier, hitscanning = FALSE)
+	. = ..()
+	if(wave_movement)
+		pixel_moves++
+		set_angle(original_angle + pixel_moves * wave_speed)
 
 /obj/item/wendigo_blood
 	name = "bottle of wendigo blood"

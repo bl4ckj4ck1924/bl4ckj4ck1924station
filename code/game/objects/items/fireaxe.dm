@@ -1,5 +1,3 @@
-GLOBAL_DATUM(bridge_axe, /obj/item/fireaxe)
-
 /*
  * Fireaxe
  */
@@ -36,9 +34,6 @@ GLOBAL_DATUM(bridge_axe, /obj/item/fireaxe)
 
 /obj/item/fireaxe/Initialize(mapload)
 	. = ..()
-	if(!GLOB.bridge_axe && istype(get_area(src), /area/station/command))
-		GLOB.bridge_axe = src
-
 	AddComponent(/datum/component/butchering, \
 		speed = 10 SECONDS, \
 		effectiveness = 80, \
@@ -47,11 +42,6 @@ GLOBAL_DATUM(bridge_axe, /obj/item/fireaxe)
 	)
 	//axes are not known for being precision butchering tools
 	AddComponent(/datum/component/two_handed, force_unwielded=force_unwielded, force_wielded=force_wielded, icon_wielded="[base_icon_state]1")
-
-/obj/item/fireaxe/Destroy()
-	if(GLOB.bridge_axe == src)
-		GLOB.bridge_axe = null
-	return ..()
 
 /obj/item/fireaxe/update_icon_state()
 	icon_state = "[base_icon_state]0"
