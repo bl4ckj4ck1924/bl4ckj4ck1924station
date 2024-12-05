@@ -661,7 +661,7 @@
 			continue
 
 		var/turf/node_turf = get_turf(node)
-		if(node_turf.underfloor_accessibility > UNDERFLOOR_HIDDEN)
+		if(isplatingturf(node_turf) || iscatwalkturf(node_turf))
 			continue
 
 		var/connected_dir = get_dir(src, node)

@@ -49,13 +49,11 @@
 #define BB_BANE_BATMAN "BB_bane_batman"
 //yep that's it
 
-//Hunting BB keys
-///key that holds our current hunting target
+///Hunting BB keys
 #define BB_CURRENT_HUNTING_TARGET "BB_current_hunting_target"
-///key that holds our less priority hunting target
 #define BB_LOW_PRIORITY_HUNTING_TARGET "BB_low_priority_hunting_target"
-///key that holds the cooldown for our hunting subtree
-#define BB_HUNTING_COOLDOWN(type) "BB_HUNTING_COOLDOWN_[type]"
+#define BB_HUNTING_COOLDOWN "BB_HUNTING_COOLDOWN"
+
 ///Basic Mob Keys
 
 ///Targeting subtrees

@@ -8,8 +8,8 @@ import {
   Button,
   Dimmer,
   Divider,
-  DmIcon,
   Icon,
+  Image,
   Input,
   NumberInput,
   Section,
@@ -26,8 +26,7 @@ type OrderDatum = {
   cat: string;
   ref: string;
   cost: number;
-  icon: string;
-  icon_state: string;
+  product_icon: string;
 };
 
 type Item = {
@@ -128,13 +127,13 @@ const ShoppingTab = (props) => {
                   />{' '}
                   {!condensed && (
                     <Stack.Item>
-                      <DmIcon
-                        icon={item.icon}
-                        icon_state={item.icon_state}
-                        verticalAlign="middle"
-                        height={'36px'}
-                        width={'36px'}
-                        fallback={<Icon name="spinner" size={2} spin />}
+                      <Image
+                        src={`data:image/jpeg;base64,${item.product_icon}`}
+                        height="34px"
+                        width="34px"
+                        style={{
+                          verticalAlign: 'middle',
+                        }}
                       />
                     </Stack.Item>
                   )}

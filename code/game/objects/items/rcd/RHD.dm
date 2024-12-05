@@ -91,7 +91,6 @@
 
 /obj/item/construction/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	SHOULD_CALL_PARENT(TRUE)
-
 	if(istype(interacting_with, /obj/item/rcd_upgrade))
 		install_upgrade(interacting_with, user)
 		return ITEM_INTERACT_SUCCESS
@@ -101,7 +100,6 @@
 
 /obj/item/construction/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	SHOULD_CALL_PARENT(TRUE)
-
 	if(istype(tool, /obj/item/rcd_upgrade))
 		install_upgrade(tool, user)
 		return ITEM_INTERACT_SUCCESS

@@ -63,8 +63,6 @@ GLOBAL_LIST_EMPTY(antagonists)
 	var/hardcore_random_bonus = FALSE
 	/// A path to the audio stinger that plays upon gaining this datum.
 	var/stinger_sound
-	/// Whether this antag datum blocks rolling new antag datums
-	var/block_midrounds = TRUE
 
 	//ANTAG UI
 

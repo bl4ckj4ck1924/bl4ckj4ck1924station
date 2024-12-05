@@ -1,7 +1,6 @@
 ///From oil puddles from the elephant graveyard. Also an evolution of the "unmarine bonemass"
 /obj/item/fish/mastodon
 	name = "unmarine mastodon"
-	fish_id = "mastodon"
 	desc = "A monster of exposed muscles and innards, wrapped in a fish-like skeleton. You don't remember ever seeing it on the catalog."
 	icon = 'icons/obj/aquarium/wide.dmi'
 	icon_state = "mastodon"
@@ -24,26 +23,15 @@
 	average_size = 180
 	average_weight = 5000
 	death_text = "%SRC stops moving."
-	fish_traits = list(/datum/fish_trait/heavy, /datum/fish_trait/amphibious, /datum/fish_trait/revival, /datum/fish_trait/carnivore, /datum/fish_trait/predator, /datum/fish_trait/territorial)
+	fish_traits = list(/datum/fish_trait/heavy, /datum/fish_trait/amphibious, /datum/fish_trait/revival, /datum/fish_trait/carnivore, /datum/fish_trait/predator, /datum/fish_trait/aggressive)
 	beauty = FISH_BEAUTY_BAD
-
-/obj/item/fish/mastodon/Initialize(mapload, apply_qualities = TRUE)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_FISH_MADE_OF_BONE, INNATE_TRAIT)
 
 /obj/item/fish/mastodon/make_edible(weight_val)
 	return //it's all bones and gibs.
 
-/obj/item/fish/mastodon/get_export_price(price, elasticity_percent)
-	return ..() * 1.2 //This should push its soft-capped (it's pretty big) price a bit above the rest
-
-/obj/item/fish/mastodon/get_health_warnings(mob/user, always_deep = FALSE)
-	return list(span_deadsay("It's bones."))
-
 ///From the cursed spring
 /obj/item/fish/soul
 	name = "soulfish"
-	fish_id = "soulfish"
 	desc = "A distant yet vaguely close critter, like a long lost relative. You feel your soul rejuvenated just from looking at it... Also, what the fuck is this shit?!"
 	icon_state = "soulfish"
 	sprite_width = 7
@@ -77,7 +65,6 @@
 ///From the cursed spring
 /obj/item/fish/skin_crab
 	name = "skin crab"
-	fish_id = "skin_crab"
 	desc = "<i>\"And on the eighth day, a demential mockery of both humanity and crabity was made.\"<i> Fascinating."
 	icon_state = "skin_crab"
 	sprite_width = 7

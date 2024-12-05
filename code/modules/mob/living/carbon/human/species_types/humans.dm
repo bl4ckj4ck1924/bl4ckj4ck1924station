@@ -80,8 +80,8 @@
 
 /datum/species/human/get_sigh_sound(mob/living/carbon/human/human)
 	if(human.physique == FEMALE)
-		return SFX_FEMALE_SIGH
-	return SFX_MALE_SIGH
+		return 'sound/mobs/humanoids/human/sigh/female_sigh.ogg'
+	return 'sound/mobs/humanoids/human/sigh/male_sigh.ogg'
 
 /datum/species/human/get_sniff_sound(mob/living/carbon/human/human)
 	if(human.physique == FEMALE)
