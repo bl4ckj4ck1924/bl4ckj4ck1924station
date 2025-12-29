@@ -707,3 +707,38 @@
 /datum/plant_gene/reagent/preset/carbon
 	reagent_id = /datum/reagent/carbon
 	rate = 0.1
+
+/// Peach's bluespace resonance trait. On bluespace teleport or shuttle disembark, causes additional teleport and tesla shocks based on potency.
+/datum/plant_gene/trait/resonance
+	name = "Bluespace Resonance"
+	description = "It reacts energetically to bluespace translocations."
+	icon = "right-left"
+	rate = 0.2 // 20% chance at max (100) potency
+
+/datum/plant_gene/trait/resonance/on_new_plant(obj/item/our_plant, newloc)
+	. = ..()
+	if(!.)
+		return
+
+	RegisterSignal(our_plant, COMSIG_FOOD_EATEN, PROC_REF(teleported)) // for testing, remove later
+	RegisterSignal(our_plant, COMSIG_MOVABLE_POST_TELEPORT, PROC_REF(teleported))
+	RegisterSignal(our_plant, COMSIG_ATOM_AFTER_SHUTTLE_MOVE, PROC_REF(teleported))
+
+/*
+ * On teleport or shuttle movement (which also uses bluepace, as per lore), has a chance (based on potency) to teleport again and create tesla shocks
+ *
+ * our_plant - our plant, having been teleported, and teleporting again
+ */
+/datum/plant_gene/trait/resonance/proc/teleported(obj/item/our_plant)
+	SIGNAL_HANDLER
+
+	our_plant.investigate_log("resonance-teleported at [AREACOORD(our_plant)]. Last touched by: [our_plant.fingerprintslast].", INVESTIGATE_BOTANY)
+	var/obj/item/seeds/our_seed = our_plant.get_plant_seed()
+	var/resonance_chance = max(round(our_seed.potency * rate), 20) // just in case any tg downstreams allow potencies above 100
+	playsound(our_plant, 'sound/machines/defib/defib_zap.ogg', 50, TRUE) // for testing, remove later
+	if(prob(resonance_chance))
+		var/teleport_radius = max(round(our_seed.potency / 10), 1)
+		var/turf/T = get_turf(our_plant)
+		do_teleport(our_plant, T, teleport_radius, channel = TELEPORT_CHANNEL_BLUESPACE)
+		tesla_zap(source = our_plant, zap_range = 3, power = our_seed.potency, cutoff = 1 KILO JOULES, zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN | ZAP_LOW_POWER_GEN)
+		playsound(our_plant, 'sound/machines/defib/defib_zap.ogg', 50, TRUE)

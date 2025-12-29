@@ -12,7 +12,7 @@
 	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_grow = "peach-grow"
 	icon_dead = "peach-dead"
-	genes = list(/datum/plant_gene/trait/repeated_harvest)
+	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/resonance)
 	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.1)
 
 /obj/item/food/grown/peach
